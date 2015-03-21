@@ -1,9 +1,9 @@
 library(dplyr)
 library(reshape2)
-#setwd("F://Drive//R//Gettting_and_Cleaning")
+#setwd("F://Drive//R//Clean_Data_PROJ")
 
 ###
-# Load the datasets
+# Load the datasets and labels
 Xtrain <- read.table(".//UCI HAR Dataset//train//X_train.txt")
 Ytrain <- read.table(".//UCI HAR Dataset//train//Y_train.txt")
 Xtest <- read.table(".//UCI HAR Dataset//test//X_test.txt")
@@ -21,7 +21,6 @@ names <- paste(names[[1]],names[[2]])
 
 XTE <- tbl_df(Xtest)
 XTR <- tbl_df(Xtrain)
-
 YTR <- tbl_df(Ytrain)
 YTE <- tbl_df(Ytest)
 
@@ -59,4 +58,4 @@ DataS3 <- DataS2 %>% group_by(Dataset,Ys) %>% summarise_each(funs(mean)) %>% mel
 
 ### Export
 
-
+write.table(DataS3, "F://Drive//R//Getting_and_Cleaning//", sep=";", row.names=FALSE)
