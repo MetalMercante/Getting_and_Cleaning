@@ -58,4 +58,4 @@ DataS3 <- DataS2 %>% group_by(Dataset,Ys) %>% summarise_each(funs(mean)) %>% mel
 
 ### Export
 
-write.table(DataS3, "F://Drive//R//Getting_and_Cleaning//", sep=";", row.names=FALSE)
+write.table(DataS3, "F://Drive//R//Getting_and_Cleaning//TidyData.txt", sep=";", row.names=FALSE)
