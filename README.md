@@ -17,5 +17,7 @@ The data for this project can be obtained from:
 
 https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip 
 
+The dataset created by this code is in LONG FORMAT
+
 
 
